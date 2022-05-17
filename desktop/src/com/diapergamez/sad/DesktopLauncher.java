@@ -12,7 +12,7 @@ public class DesktopLauncher {
 		config.setForegroundFPS(60);
 		config.setWindowedMode(1920,1080);
 		config.setTitle("SuperAutoDunlea");
-		config.setInitialBackgroundColor(Color.BLACK);
+
 		Lwjgl3Application game = new Lwjgl3Application(new gameMain(), config);
 	}
 }
