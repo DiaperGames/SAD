@@ -1,6 +1,7 @@
 package com.diapergamez.sad.screens;
 
 import com.badlogic.gdx.Screen;
+import com.diapergamez.sad.gameMain;
 
 public class mainMenu implements Screen {
     @Override
