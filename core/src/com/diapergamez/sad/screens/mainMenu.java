@@ -12,6 +12,32 @@ import com.diapergamez.sad.gameMain;
 
 
 public class mainMenu implements Screen {
+    final gameMain game;
+    OrthographicCamera camera;
+    private Stage menu;
+    private Skin skin;
+    /* TODO implement a Skin file (it's not like .skin i don't think) that will reference the font
+    *   we want to use and whatever other stuff you put in that file;
+    *
+    * TODO whoever is gonna be the GUI guy (might be me >:(  ) please learn the rest of scene2d, and implement this in a way that looks nice
+    *
+     * */
+
+    public mainMenu(gameMain game){
+        int w = Gdx.graphics.getWidth();
+        int h = Gdx.graphics.getHeight();
+        this.game = game;
+        camera = new OrthographicCamera(w,h);
+        FitViewport viewport = new FitViewport(w, h, camera);
+        menu = new Stage(viewport);
+        Gdx.input.setInputProcessor(menu);
+        //i barely know what this shit does
+        skin = new Skin(Gdx.files.internal("UI/skinui.json"));
+
+
+
+    }
+
     @Override
     public void show() {
 
