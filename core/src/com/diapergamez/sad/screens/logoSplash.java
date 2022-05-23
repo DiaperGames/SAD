@@ -50,8 +50,6 @@ public class logoSplash implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         splashStage.getBatch().getProjectionMatrix().setToOrtho2D(0, 0, 1, 1);
         splashStage.draw();
-        //TODO fix the STUPID fucking baby and make it actually fade in cause I have no fucking clue why the actor won't work
-        //
         orthocam.update();
         splashStage.act(Gdx.graphics.getDeltaTime());
        /*
