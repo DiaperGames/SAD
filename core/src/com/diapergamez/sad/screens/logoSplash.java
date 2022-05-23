@@ -21,6 +21,7 @@ public class logoSplash implements Screen {
     private int w, h;
     private Logo logo;
     private Sound cry;
+    //TODO maybe draw a loading bar? that would be a good use of asset manager
 
     public logoSplash(gameMain gameMain) {
         cry = Gdx.audio.newSound(Gdx.files.internal("baby.mp3"));
@@ -35,7 +36,8 @@ public class logoSplash implements Screen {
         splashStage.addActor(logo);
         Gdx.input.setInputProcessor(splashStage);
         logo.addAction(Actions.fadeIn(2f));
-        game = new gameMain();
+        game = gameMain; //fixed minor bug
+        Gdx.input.setInputProcessor(splashStage);
 
     }
 
@@ -62,6 +64,7 @@ public class logoSplash implements Screen {
           mainMenu main = new mainMenu(game);
            game.setScreen(main);
            main.render(Gdx.graphics.getDeltaTime());
+
            hide();
 
 
@@ -86,9 +89,10 @@ public class logoSplash implements Screen {
     }
 
     @Override
+    //try to put a lot of your dispose methods here because I can't figure out why the dispose method doesn't work.
     public void hide() {
         cry.dispose();
-        System.out.println("splash has been disposed");
+
     }
 
     @Override

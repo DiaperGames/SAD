@@ -18,6 +18,7 @@ public OrthographicCamera orthocam;
 		orthocam = new OrthographicCamera(w,h);
 		setScreen(new logoSplash(gameMain.this));
 
+
 	}
 	public void render(){
 		super.render();
