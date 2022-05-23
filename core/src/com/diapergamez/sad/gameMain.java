@@ -7,13 +7,16 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.diapergamez.sad.screens.logoSplash;
 
 public class gameMain extends Game{
-public AssetManager manager;
+public AssetManager manager = new AssetManager();
 public OrthographicCamera orthocam;
+
+
+
 	@Override
 	public void create() {
-		setScreen(new logoSplash());
 		int w = Gdx.graphics.getWidth(); int h = Gdx.graphics.getHeight();
 		orthocam = new OrthographicCamera(w,h);
+		setScreen(new logoSplash(gameMain.this));
 
 	}
 	public void render(){
@@ -25,5 +28,6 @@ public OrthographicCamera orthocam;
 
 	public void loadAssets(){
 		//TODO put assett loading shit here
+		manager.update();
 	}
 }
