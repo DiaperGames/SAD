@@ -57,10 +57,15 @@ public class logoSplash implements Screen {
        /*
        TODO put the assett manager stuff that is to be loaded here.
         */
-        game.loadAssets();
+        game.manager.update();
+        game.manager.update(1000);
         //if assetts are loaded, and the splash screen has been shown for longer than 10 seconds do
-        if (game.manager.update() || TimeUtils.timeSinceMillis(screenStart)>= 10000){
-           // game.setScreen(new mainMenu(game));
+        if (game.manager.update() && TimeUtils.timeSinceMillis(screenStart)>= 3000){
+          mainMenu main = new mainMenu(game);
+           game.setScreen(main);
+           main.render(Gdx.graphics.getDeltaTime());
+           hide();
+
 
         }
 
@@ -84,12 +89,17 @@ public class logoSplash implements Screen {
 
     @Override
     public void hide() {
-
+        cry.dispose();
+        System.out.println("splash has been disposed");
     }
 
     @Override
+    //for some reason the dispose class is not called automatically when it isn't needed anymore
+    //TODO figure out how to get this screen to dispose itself when done
     public void dispose() {
+        this.hide();
         splashStage.dispose();
         cry.dispose();
+        System.out.println("splash has been disposed");
     }
 }
