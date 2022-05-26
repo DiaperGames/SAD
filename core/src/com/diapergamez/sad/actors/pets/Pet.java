@@ -1,15 +1,14 @@
 package com.diapergamez.sad.actors.pets;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.diapergamez.sad.Items;
-
-import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Pet extends Actor {
+    private float myX,myY;
     public int tw, th;
     private Texture petPic;
     private ParticleEffect itemEffect;
@@ -17,7 +16,7 @@ public class Pet extends Actor {
     private boolean hasHouse, hasMaxVal, hasParallel, hasPi, hasSemicolon, hasSwitch, hasTicTacToe;
     private byte turn;
     public TextureAtlas items;
-    private ParticleEmitter particleEffects[];
+    private ArrayList<ParticleEmitter> particleEffects = new ArrayList<ParticleEmitter>();
     //below bool is for the maxValue item
     //TODO We'd likely have to do stat checking of the units at the start of each turn
     private boolean isStrongest;
@@ -28,15 +27,20 @@ public class Pet extends Actor {
     * Implement texture parameter in subclass, push texture parameter to super.
      */
     public Pet(float x, float y, Texture texture) {
+
+
+        myX = x;
+        myY = y;
         petPic = texture;
         setBounds(x,y, petPic.getWidth(), petPic.getHeight());
         setTouchable(Touchable.enabled);
         setVisible(true);
         items = new TextureAtlas(Gdx.files.internal("items.atlas"));
         itemEffect.load(Gdx.files.internal("/items/items.particle"),items);
-        particleEffects = itemEffect.getEmitters().toArray();
 
         }
+    /* TODO !Important I haven't actually been able to test any of the particle effects/emitters outside of creating
+    *       creating them, so they may not even draw properly/in the right place*/
 
     /*
      this is probably more efficient than building a bunch of item classes.
@@ -59,36 +63,62 @@ public class Pet extends Actor {
                     //loading the particle file, and it's associated item
 
                   if(!hasHouse) {
-                      particleEffects[0] = itemEffect.findEmitter("House");
+                      //particleEffects[0] =
+                      particleEffects.add(itemEffect.findEmitter("House"));
                       hasHouse = true;
                   }
                     break;
                 case MAXVALUE:
-                   //TODO someone else implement maxvalue in a memory conscious way
+                   //TODO someone else implement maxvalue in a memory conscious way cause this shit sucks to implement
+                    //TODO implement the stat changes, and a way to figure out what turn it is
+                    if(!hasMaxVal){
+
+                        //particleEffects[1] = itemEffect.findEmitter("MaxValue");
+                        particleEffects.add(itemEffect.findEmitter("MaxValue"));
+                        hasMaxVal = true;
+                    }
                     break;
                 case PARALELL:
+                    //TODO implement stat changes
                     if(!hasParallel){
-
+                        //TODO implement stat changes
+                        //particleEffects[2] = itemEffect.findEmitter(("Parallel Lines"));
+                        particleEffects.add(itemEffect.findEmitter(("Parallel Lines")));
                         hasParallel = true;
                     }
                     break;
                 case PI:
                     if(!hasPi){
+                        //TODO implement stat changes
+
+                        //particleEffects[3] = itemEffect.findEmitter("Pi");
+                        particleEffects.add(itemEffect.findEmitter("Pi"));
                         hasPi = true;
                     }
                     break;
                 case SEMICOLON:
+                    //TODO implement stat changes
                     if(!hasSemicolon){
+
+                        //particleEffects[4] = itemEffect.findEmitter("Semicolon");
+                        particleEffects.add(itemEffect.findEmitter("Semicolon"));
                         hasSemicolon = true;
                     }
                     break;
                 case SWITCH:
+                    //TODO implement stat changes
                     if(!hasSwitch){
+
+                       // particleEffects[5] = itemEffect.findEmitter("Switch");
+                        particleEffects.add( itemEffect.findEmitter("Switch"));
                        hasSwitch = true;
                     }
                     break;
                 case TICTACTOE:
+                    //TODO implement stat changes
                     if(!hasTicTacToe){
+//                        particleEffects[6] = itemEffect.findEmitter("TicTacToe");
+                        particleEffects.add( itemEffect.findEmitter("TicTacToe"));
                         hasTicTacToe = true;
                     }
                     break;
@@ -99,6 +129,13 @@ public class Pet extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
+        if (hasParallel || hasPi ||hasSwitch || hasSemicolon || hasHouse || hasMaxVal || hasTicTacToe && !particleEffects.isEmpty()){
+            for (ParticleEmitter emitter: particleEffects) {
+                emitter.setPosition(myX,myY);
+                emitter.draw(batch);}
+
+
+        }
         super.draw(batch, parentAlpha);
     }
 
