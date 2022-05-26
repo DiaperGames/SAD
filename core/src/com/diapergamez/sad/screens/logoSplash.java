@@ -13,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.utils.TimeUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.diapergamez.sad.Items;
 import com.diapergamez.sad.actors.loading.Logo;
 import com.diapergamez.sad.actors.pets.Pet;
 import com.diapergamez.sad.gameMain;
@@ -30,6 +31,7 @@ public class logoSplash implements Screen {
 
     public logoSplash(gameMain gameMain) {
 
+
         cry = Gdx.audio.newSound(Gdx.files.internal("baby.mp3"));
         screenStart = System.currentTimeMillis();
         int w = Gdx.graphics.getWidth();
@@ -45,6 +47,9 @@ public class logoSplash implements Screen {
         game = gameMain; //fixed minor bug
         Gdx.input.setInputProcessor(splashStage);
 
+        Pet pet = new Pet(1,1,logo.minion);
+        pet.giveItem(Items.HOUSE);
+        splashStage.addActor(pet);
 
     }
 
