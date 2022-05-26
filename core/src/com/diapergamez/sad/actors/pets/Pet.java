@@ -8,36 +8,57 @@ import com.diapergamez.sad.Items;
 import java.util.ArrayList;
 
 public class Pet extends Actor {
-    private float myX,myY;
-    public int tw, th;
-    private Texture petPic;
+    @SuppressWarnings("FieldMayBeFinal")
+    private float myX,
+                  myY,
+                  tw,
+                  th;
+
+    private final Texture petPic;
     private ParticleEffect itemEffect;
-    private byte health,attack; //0-50 range
-    private boolean hasHouse, hasMaxVal, hasParallel, hasPi, hasSemicolon, hasSwitch, hasTicTacToe;
+    private byte
+            level,
+            ticTacToeCount,
+            maxValCount,
+            tier,
+            health, //0-50 range
+            attack; //0-50 range
+    private boolean hasHouse;
+    private boolean hasMaxVal;
+    private boolean hasParallel;
+    private boolean hasPi;
+    private boolean hasSemicolon;
+    private boolean hasSwitch;
+    private boolean hasTicTacToe;
+    private boolean isStrongest;
+    private boolean isFirst;
+    private boolean isLast;
+
+
+    private boolean isHealthiest;
+
     private byte turn;
     public TextureAtlas items;
     private ArrayList<ParticleEmitter> particleEffects = new ArrayList<ParticleEmitter>();
     //below bool is for the maxValue item
     //TODO We'd likely have to do stat checking of the units at the start of each turn
-    private boolean isStrongest;
-    private byte level;
     /**
     * X & Y, coordinates as to where you want texture to be drawn
     * (is drawn from bottom left)
     * Implement texture parameter in subclass, push texture parameter to super.
      */
     public Pet(float x, float y, Texture texture) {
-
-
         myX = x;
         myY = y;
         petPic = texture;
-        setBounds(x,y, petPic.getWidth(), petPic.getHeight());
+        tw = petPic.getWidth();
+        th = petPic.getHeight();
+        setBounds(x,y,tw,th);
         setTouchable(Touchable.enabled);
         setVisible(true);
         items = new TextureAtlas(Gdx.files.internal("items.atlas"));
-        itemEffect.load(Gdx.files.internal("/items/items.particle"),items);
-
+        itemEffect = new ParticleEffect();
+        itemEffect.load(Gdx.files.internal("items/items.particle"),items);
         }
     /* TODO !Important I haven't actually been able to test any of the particle effects/emitters outside of creating
     *       creating them, so they may not even draw properly/in the right place*/
@@ -56,70 +77,121 @@ public class Pet extends Actor {
     * ONLY CALL MAXVALUE IF This.isStrongest= true
     *
      */
+    /**
+     *
+     * @param item
+     */
+//made this an if/else statement to improve readability
+    public void removeItem(Items item){
+
+        if (item == Items.MAXVALUE) {
+            for (int i = 0; i < maxValCount; i++) {
+                attack -= 3;
+            }
+            hasMaxVal = false;
+            maxValCount = 0;
+        } else if (item == Items.TICTACTOE) {
+            for (int i = 0; i < ticTacToeCount; i++) {
+                health--;
+                attack--;
+            }
+            hasTicTacToe = false;
+            ticTacToeCount = 0;
+        }
+    }
+
+
+    /**
+     * For MaxVal, only call if pet.isStrongest = True;
+     * for Switch, only call if the pet infront is dead (check for this
+     * @param item = Name of the item you want to give the pet, (see Items.java for ENUM data)
+     *
+     */
     public void giveItem(Items item){
             switch (item) {
                 case HOUSE:
                     health+=2;
-                    //loading the particle file, and it's associated item
-
                   if(!hasHouse) {
-                      //particleEffects[0] =
-                      particleEffects.add(itemEffect.findEmitter("House"));
+                      particleEffects.add(0,itemEffect.findEmitter("House"));
                       hasHouse = true;
                   }
                     break;
                 case MAXVALUE:
                    //TODO someone else implement maxvalue in a memory conscious way cause this shit sucks to implement
                     //TODO implement the stat changes, and a way to figure out what turn it is
+                    attack+=3;
                     if(!hasMaxVal){
-
-                        //particleEffects[1] = itemEffect.findEmitter("MaxValue");
-                        particleEffects.add(itemEffect.findEmitter("MaxValue"));
+                        maxValCount++;
+                        particleEffects.add(1,itemEffect.findEmitter("MaxValue"));
                         hasMaxVal = true;
+                    }else{
+                        maxValCount++;
                     }
                     break;
                 case PARALELL:
-                    //TODO implement stat changes
+
+                    byte average = (byte) ((health+attack)/2);
+                    attack = average;
+                    health = average;
                     if(!hasParallel){
-                        //TODO implement stat changes
-                        //particleEffects[2] = itemEffect.findEmitter(("Parallel Lines"));
-                        particleEffects.add(itemEffect.findEmitter(("Parallel Lines")));
+                        particleEffects.add(2,itemEffect.findEmitter(("Parallel Lines")));
                         hasParallel = true;
                     }
                     break;
                 case PI:
                     if(!hasPi){
-                        //TODO implement stat changes
-
-                        //particleEffects[3] = itemEffect.findEmitter("Pi");
-                        particleEffects.add(itemEffect.findEmitter("Pi"));
+                        switch(level)
+                        {
+                            case 1:
+                                attack+=3;
+                                health++;
+                                break;
+                            case 2:
+                                attack+=4;
+                                health++;
+                                break;
+                            case 3:
+                                attack+=5;
+                                health+=9;
+                                break;
+                        }
+                        particleEffects.add(3,itemEffect.findEmitter("Pi"));
                         hasPi = true;
                     }
                     break;
                 case SEMICOLON:
-                    //TODO implement stat changes
-                    if(!hasSemicolon){
+                    //todo implement semicolon as an item instead of a pet, as that is what LIAM intended
+                    //todo maybe implement a way where you can only give semicolon to the last pet
 
-                        //particleEffects[4] = itemEffect.findEmitter("Semicolon");
-                        particleEffects.add(itemEffect.findEmitter("Semicolon"));
+                    health+=3;
+                    attack+=3;
+                    if(!hasSemicolon){
+                        particleEffects.add(4,itemEffect.findEmitter("Semicolon"));
                         hasSemicolon = true;
                     }
                     break;
                 case SWITCH:
-                    //TODO implement stat changes
+                    //TODO implement a check for when the pet ahead faints in the screen method
+
                     if(!hasSwitch){
 
-                       // particleEffects[5] = itemEffect.findEmitter("Switch");
-                        particleEffects.add( itemEffect.findEmitter("Switch"));
+                        particleEffects.add(5,itemEffect.findEmitter("Switch"));
                        hasSwitch = true;
                     }
                     break;
                 case TICTACTOE:
+
                     //TODO implement stat changes
                     if(!hasTicTacToe){
-//                        particleEffects[6] = itemEffect.findEmitter("TicTacToe");
-                        particleEffects.add( itemEffect.findEmitter("TicTacToe"));
+                        attack++;
+                        health++;
+                        ticTacToeCount++;
+                        particleEffects.add(6,itemEffect.findEmitter("TicTacToe"));
                         hasTicTacToe = true;
+                    }else{
+                        attack++;
+                        health++;
+                        ticTacToeCount++;
                     }
                     break;
             }
@@ -129,24 +201,17 @@ public class Pet extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
+        batch.draw(petPic,myX,myY,tw,th);
         if (hasParallel || hasPi ||hasSwitch || hasSemicolon || hasHouse || hasMaxVal || hasTicTacToe && !particleEffects.isEmpty()){
             for (ParticleEmitter emitter: particleEffects) {
+                emitter.start();
                 emitter.setPosition(myX,myY);
-                emitter.draw(batch);}
-
-
+                emitter.setAdditive(true);
+                emitter.setContinuous(true);
+                emitter.draw(batch,Gdx.graphics.getDeltaTime());}
         }
-        super.draw(batch, parentAlpha);
+
     }
-
-
-
-
-
-
-
-
-
 
     public byte getHealth() {
         return health;
@@ -186,5 +251,36 @@ public class Pet extends Actor {
 
     public void setLevel(byte level) {
         this.level = level;
+    }
+
+    public byte getTier() {
+        return tier;
+    }
+    public boolean isFirst() {
+        return isFirst;
+    }
+
+    public void setFirst(boolean first) {
+        isFirst = first;
+    }
+
+    public boolean isLast() {
+        return isLast;
+    }
+
+    public void setLast(boolean last) {
+        isLast = last;
+    }
+
+    public boolean isHealthiest() {
+        return isHealthiest;
+    }
+
+    public void setHealthiest(boolean healthiest) {
+        isHealthiest = healthiest;
+    }
+
+    public void setTier(byte tier) {
+        this.tier = tier;
     }
 }
