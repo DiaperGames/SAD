@@ -1,0 +1,1406 @@
+MaxValue
+- Delay -
+active: true
+lowMin: 0.0
+lowMax: 0.0
+- Duration - 
+lowMin: 1000.0
+lowMax: 1000.0
+- Count - 
+min: 0
+max: 1
+- Emission - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: true
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Life - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 3994.0
+highMax: 3994.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- Life Offset - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- X Offset - 
+active: true
+lowMin: -40.0
+lowMax: -40.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Offset - 
+active: false
+- Spawn Shape - 
+shape: line
+- Spawn Width - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 108.0
+highMax: 108.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Spawn Height - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- X Scale - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 32.0
+highMax: 32.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Scale - 
+active: false
+- Velocity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 50.0
+highMax: 60.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Angle - 
+active: true
+lowMin: 70.0
+lowMax: 0.0
+highMin: 90.0
+highMax: 90.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Rotation - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Wind - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 30.0
+relative: false
+scalingCount: 14
+scaling0: 0.53488374
+scaling1: 0.9011628
+scaling2: 0.38372093
+scaling3: 0.5872093
+scaling4: 0.98255813
+scaling5: 0.45348838
+scaling6: 0.23837209
+scaling7: 0.64534885
+scaling8: 0.9186047
+scaling9: 0.7906977
+scaling10: 0.3255814
+scaling11: 0.10465116
+scaling12: 0.3604651
+scaling13: 0.5116279
+timelineCount: 14
+timeline0: 0.0
+timeline1: 0.121502794
+timeline2: 0.13669065
+timeline3: 0.24860112
+timeline4: 0.3141487
+timeline5: 0.31514868
+timeline6: 0.3605116
+timeline7: 0.39728218
+timeline8: 0.42286173
+timeline9: 0.5043965
+timeline10: 0.51958436
+timeline11: 0.58193445
+timeline12: 0.6578737
+timeline13: 0.69864106
+- Gravity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Tint - 
+colorsCount: 3
+colors0: 1.0
+colors1: 1.0
+colors2: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Transparency - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Options - 
+attached: false
+continuous: false
+aligned: false
+additive: true
+behind: false
+premultipliedAlpha: false
+spriteMode: single
+- Image Paths -
+MaxValue().png
+
+
+Pi
+- Delay -
+active: true
+lowMin: 0.0
+lowMax: 0.0
+- Duration - 
+lowMin: 1000.0
+lowMax: 1000.0
+- Count - 
+min: 0
+max: 1
+- Emission - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: true
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Life - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 3994.0
+highMax: 3994.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- Life Offset - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- X Offset - 
+active: true
+lowMin: -40.0
+lowMax: -40.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Offset - 
+active: false
+- Spawn Shape - 
+shape: line
+- Spawn Width - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 108.0
+highMax: 108.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Spawn Height - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- X Scale - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 32.0
+highMax: 32.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Scale - 
+active: false
+- Velocity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 50.0
+highMax: 60.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Angle - 
+active: true
+lowMin: 70.0
+lowMax: 0.0
+highMin: 90.0
+highMax: 90.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Rotation - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Wind - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 30.0
+relative: false
+scalingCount: 14
+scaling0: 0.53488374
+scaling1: 0.9011628
+scaling2: 0.38372093
+scaling3: 0.5872093
+scaling4: 0.98255813
+scaling5: 0.45348838
+scaling6: 0.23837209
+scaling7: 0.64534885
+scaling8: 0.9186047
+scaling9: 0.7906977
+scaling10: 0.3255814
+scaling11: 0.10465116
+scaling12: 0.3604651
+scaling13: 0.5116279
+timelineCount: 14
+timeline0: 0.0
+timeline1: 0.121502794
+timeline2: 0.13669065
+timeline3: 0.24860112
+timeline4: 0.3141487
+timeline5: 0.31514868
+timeline6: 0.3605116
+timeline7: 0.39728218
+timeline8: 0.42286173
+timeline9: 0.5043965
+timeline10: 0.51958436
+timeline11: 0.58193445
+timeline12: 0.6578737
+timeline13: 0.69864106
+- Gravity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Tint - 
+colorsCount: 3
+colors0: 1.0
+colors1: 1.0
+colors2: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Transparency - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Options - 
+attached: false
+continuous: false
+aligned: false
+additive: true
+behind: false
+premultipliedAlpha: false
+spriteMode: single
+- Image Paths -
+PI.png
+
+
+Semicolon
+- Delay -
+active: true
+lowMin: 0.0
+lowMax: 0.0
+- Duration - 
+lowMin: 1000.0
+lowMax: 1000.0
+- Count - 
+min: 0
+max: 1
+- Emission - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: true
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Life - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 3994.0
+highMax: 3994.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- Life Offset - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- X Offset - 
+active: true
+lowMin: -40.0
+lowMax: -40.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Offset - 
+active: false
+- Spawn Shape - 
+shape: line
+- Spawn Width - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 108.0
+highMax: 108.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Spawn Height - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- X Scale - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 32.0
+highMax: 32.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Scale - 
+active: false
+- Velocity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 50.0
+highMax: 60.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Angle - 
+active: true
+lowMin: 70.0
+lowMax: 0.0
+highMin: 90.0
+highMax: 90.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Rotation - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Wind - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 30.0
+relative: false
+scalingCount: 14
+scaling0: 0.53488374
+scaling1: 0.9011628
+scaling2: 0.38372093
+scaling3: 0.5872093
+scaling4: 0.98255813
+scaling5: 0.45348838
+scaling6: 0.23837209
+scaling7: 0.64534885
+scaling8: 0.9186047
+scaling9: 0.7906977
+scaling10: 0.3255814
+scaling11: 0.10465116
+scaling12: 0.3604651
+scaling13: 0.5116279
+timelineCount: 14
+timeline0: 0.0
+timeline1: 0.121502794
+timeline2: 0.13669065
+timeline3: 0.24860112
+timeline4: 0.3141487
+timeline5: 0.31514868
+timeline6: 0.3605116
+timeline7: 0.39728218
+timeline8: 0.42286173
+timeline9: 0.5043965
+timeline10: 0.51958436
+timeline11: 0.58193445
+timeline12: 0.6578737
+timeline13: 0.69864106
+- Gravity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Tint - 
+colorsCount: 3
+colors0: 1.0
+colors1: 1.0
+colors2: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Transparency - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Options - 
+attached: false
+continuous: false
+aligned: false
+additive: true
+behind: false
+premultipliedAlpha: false
+spriteMode: single
+- Image Paths -
+Semicolon.png
+
+
+Switch
+- Delay -
+active: true
+lowMin: 0.0
+lowMax: 0.0
+- Duration - 
+lowMin: 1000.0
+lowMax: 1000.0
+- Count - 
+min: 0
+max: 1
+- Emission - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: true
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Life - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 3994.0
+highMax: 3994.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- Life Offset - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- X Offset - 
+active: true
+lowMin: -40.0
+lowMax: -40.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Offset - 
+active: false
+- Spawn Shape - 
+shape: line
+- Spawn Width - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 108.0
+highMax: 108.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Spawn Height - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- X Scale - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 32.0
+highMax: 32.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Scale - 
+active: false
+- Velocity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 50.0
+highMax: 60.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Angle - 
+active: true
+lowMin: 70.0
+lowMax: 0.0
+highMin: 90.0
+highMax: 90.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Rotation - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Wind - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 30.0
+relative: false
+scalingCount: 14
+scaling0: 0.53488374
+scaling1: 0.9011628
+scaling2: 0.38372093
+scaling3: 0.5872093
+scaling4: 0.98255813
+scaling5: 0.45348838
+scaling6: 0.23837209
+scaling7: 0.64534885
+scaling8: 0.9186047
+scaling9: 0.7906977
+scaling10: 0.3255814
+scaling11: 0.10465116
+scaling12: 0.3604651
+scaling13: 0.5116279
+timelineCount: 14
+timeline0: 0.0
+timeline1: 0.121502794
+timeline2: 0.13669065
+timeline3: 0.24860112
+timeline4: 0.3141487
+timeline5: 0.31514868
+timeline6: 0.3605116
+timeline7: 0.39728218
+timeline8: 0.42286173
+timeline9: 0.5043965
+timeline10: 0.51958436
+timeline11: 0.58193445
+timeline12: 0.6578737
+timeline13: 0.69864106
+- Gravity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Tint - 
+colorsCount: 3
+colors0: 1.0
+colors1: 1.0
+colors2: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Transparency - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Options - 
+attached: false
+continuous: false
+aligned: false
+additive: true
+behind: false
+premultipliedAlpha: false
+spriteMode: single
+- Image Paths -
+Switch.png
+
+
+TicTacToe
+- Delay -
+active: true
+lowMin: 0.0
+lowMax: 0.0
+- Duration - 
+lowMin: 1000.0
+lowMax: 1000.0
+- Count - 
+min: 0
+max: 1
+- Emission - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: true
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Life - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 3994.0
+highMax: 3994.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- Life Offset - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- X Offset - 
+active: true
+lowMin: -40.0
+lowMax: -40.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Offset - 
+active: false
+- Spawn Shape - 
+shape: line
+- Spawn Width - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 108.0
+highMax: 108.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Spawn Height - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- X Scale - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 32.0
+highMax: 32.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Scale - 
+active: false
+- Velocity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 50.0
+highMax: 60.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Angle - 
+active: true
+lowMin: 70.0
+lowMax: 0.0
+highMin: 90.0
+highMax: 90.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Rotation - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Wind - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 30.0
+relative: false
+scalingCount: 14
+scaling0: 0.53488374
+scaling1: 0.9011628
+scaling2: 0.38372093
+scaling3: 0.5872093
+scaling4: 0.98255813
+scaling5: 0.45348838
+scaling6: 0.23837209
+scaling7: 0.64534885
+scaling8: 0.9186047
+scaling9: 0.7906977
+scaling10: 0.3255814
+scaling11: 0.10465116
+scaling12: 0.3604651
+scaling13: 0.5116279
+timelineCount: 14
+timeline0: 0.0
+timeline1: 0.121502794
+timeline2: 0.13669065
+timeline3: 0.24860112
+timeline4: 0.3141487
+timeline5: 0.31514868
+timeline6: 0.3605116
+timeline7: 0.39728218
+timeline8: 0.42286173
+timeline9: 0.5043965
+timeline10: 0.51958436
+timeline11: 0.58193445
+timeline12: 0.6578737
+timeline13: 0.69864106
+- Gravity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Tint - 
+colorsCount: 3
+colors0: 1.0
+colors1: 1.0
+colors2: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Transparency - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Options - 
+attached: false
+continuous: false
+aligned: false
+additive: true
+behind: false
+premultipliedAlpha: false
+spriteMode: single
+- Image Paths -
+TicTacToe.png
+
+
+House
+- Delay -
+active: true
+lowMin: 0.0
+lowMax: 0.0
+- Duration - 
+lowMin: 1000.0
+lowMax: 1000.0
+- Count - 
+min: 0
+max: 1
+- Emission - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: true
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Life - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 3994.0
+highMax: 3994.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- Life Offset - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- X Offset - 
+active: true
+lowMin: -40.0
+lowMax: -40.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Offset - 
+active: false
+- Spawn Shape - 
+shape: line
+- Spawn Width - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 108.0
+highMax: 108.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Spawn Height - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- X Scale - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 32.0
+highMax: 32.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Scale - 
+active: false
+- Velocity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 50.0
+highMax: 60.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Angle - 
+active: true
+lowMin: 70.0
+lowMax: 0.0
+highMin: 90.0
+highMax: 90.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Rotation - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Wind - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 30.0
+relative: false
+scalingCount: 14
+scaling0: 0.53488374
+scaling1: 0.9011628
+scaling2: 0.38372093
+scaling3: 0.5872093
+scaling4: 0.98255813
+scaling5: 0.45348838
+scaling6: 0.23837209
+scaling7: 0.64534885
+scaling8: 0.9186047
+scaling9: 0.7906977
+scaling10: 0.3255814
+scaling11: 0.10465116
+scaling12: 0.3604651
+scaling13: 0.5116279
+timelineCount: 14
+timeline0: 0.0
+timeline1: 0.121502794
+timeline2: 0.13669065
+timeline3: 0.24860112
+timeline4: 0.3141487
+timeline5: 0.31514868
+timeline6: 0.3605116
+timeline7: 0.39728218
+timeline8: 0.42286173
+timeline9: 0.5043965
+timeline10: 0.51958436
+timeline11: 0.58193445
+timeline12: 0.6578737
+timeline13: 0.69864106
+- Gravity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Tint - 
+colorsCount: 3
+colors0: 1.0
+colors1: 1.0
+colors2: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Transparency - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Options - 
+attached: false
+continuous: false
+aligned: false
+additive: true
+behind: false
+premultipliedAlpha: false
+spriteMode: single
+- Image Paths -
+House.png
+
+
+Parralel Lines
+- Delay -
+active: true
+lowMin: 0.0
+lowMax: 0.0
+- Duration - 
+lowMin: 1000.0
+lowMax: 1000.0
+- Count - 
+min: 0
+max: 1
+- Emission - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: true
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Life - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 3994.0
+highMax: 3994.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- Life Offset - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+independent: false
+- X Offset - 
+active: true
+lowMin: -40.0
+lowMax: -40.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Offset - 
+active: false
+- Spawn Shape - 
+shape: line
+- Spawn Width - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 108.0
+highMax: 108.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Spawn Height - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- X Scale - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 32.0
+highMax: 32.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Y Scale - 
+active: false
+- Velocity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 50.0
+highMax: 60.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Angle - 
+active: true
+lowMin: 70.0
+lowMax: 0.0
+highMin: 90.0
+highMax: 90.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Rotation - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Wind - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 30.0
+relative: false
+scalingCount: 14
+scaling0: 0.53488374
+scaling1: 0.9011628
+scaling2: 0.38372093
+scaling3: 0.5872093
+scaling4: 0.98255813
+scaling5: 0.45348838
+scaling6: 0.23837209
+scaling7: 0.64534885
+scaling8: 0.9186047
+scaling9: 0.7906977
+scaling10: 0.3255814
+scaling11: 0.10465116
+scaling12: 0.3604651
+scaling13: 0.5116279
+timelineCount: 14
+timeline0: 0.0
+timeline1: 0.121502794
+timeline2: 0.13669065
+timeline3: 0.24860112
+timeline4: 0.3141487
+timeline5: 0.31514868
+timeline6: 0.3605116
+timeline7: 0.39728218
+timeline8: 0.42286173
+timeline9: 0.5043965
+timeline10: 0.51958436
+timeline11: 0.58193445
+timeline12: 0.6578737
+timeline13: 0.69864106
+- Gravity - 
+active: true
+lowMin: 0.0
+lowMax: 0.0
+highMin: 0.0
+highMax: 0.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Tint - 
+colorsCount: 3
+colors0: 1.0
+colors1: 1.0
+colors2: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Transparency - 
+lowMin: 0.0
+lowMax: 0.0
+highMin: 1.0
+highMax: 1.0
+relative: false
+scalingCount: 1
+scaling0: 1.0
+timelineCount: 1
+timeline0: 0.0
+- Options - 
+attached: false
+continuous: false
+aligned: false
+additive: true
+behind: false
+premultipliedAlpha: false
+spriteMode: single
+- Image Paths -
+Paralell Lines.png
+
