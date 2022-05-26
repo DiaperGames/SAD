@@ -1,13 +1,10 @@
 package com.diapergamez.sad.actors.pets;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.diapergamez.sad.Items;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Pet extends Actor {
@@ -30,6 +27,8 @@ public class Pet extends Actor {
     * Implement texture parameter in subclass, push texture parameter to super.
      */
     public Pet(float x, float y, Texture texture) {
+
+
         myX = x;
         myY = y;
         petPic = texture;
@@ -38,7 +37,6 @@ public class Pet extends Actor {
         setVisible(true);
         items = new TextureAtlas(Gdx.files.internal("items.atlas"));
         itemEffect.load(Gdx.files.internal("/items/items.particle"),items);
-
 
         }
     /* TODO !Important I haven't actually been able to test any of the particle effects/emitters outside of creating
