@@ -31,7 +31,10 @@ public class Pet extends Actor {
         petPic = texture;
         setBounds(x,y, petPic.getWidth(), petPic.getHeight());
         setTouchable(Touchable.enabled);
-        setVisible(false);
+        setVisible(true);
+        items = new TextureAtlas(Gdx.files.internal("items.atlas"));
+        itemEffect.load(Gdx.files.internal("/items/items.particle"),items);
+        particleEffects = itemEffect.getEmitters().toArray();
 
         }
 
