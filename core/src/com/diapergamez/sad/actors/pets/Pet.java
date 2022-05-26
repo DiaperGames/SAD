@@ -64,31 +64,52 @@ public class Pet extends Actor {
                   }
                     break;
                 case MAXVALUE:
-                   //TODO someone else implement maxvalue in a memory conscious way
+                   //TODO someone else implement maxvalue in a memory conscious way cause this shit sucks to implement
+                    //TODO implement the stat changes, and a way to figure out what turn it is
+                    if(!hasMaxVal){
+
+                        particleEffects[1] = itemEffect.findEmitter("MaxValue");
+                        hasMaxVal = true;
+                    }
                     break;
                 case PARALELL:
+                    //TODO implement stat changes
                     if(!hasParallel){
 
+                        //TODO implement stat changes
+                        particleEffects[2] = itemEffect.findEmitter(("Parallel Lines"));
                         hasParallel = true;
                     }
                     break;
                 case PI:
                     if(!hasPi){
+                        //TODO implement stat changes
+
+                        particleEffects[3] = itemEffect.findEmitter("Pi");
                         hasPi = true;
                     }
                     break;
                 case SEMICOLON:
+                    //TODO implement stat changes
                     if(!hasSemicolon){
+
+                        particleEffects[4] = itemEffect.findEmitter("Semicolon");
                         hasSemicolon = true;
                     }
                     break;
                 case SWITCH:
+                    //TODO implement stat changes
                     if(!hasSwitch){
+
+                        particleEffects[5] = itemEffect.findEmitter("Switch");
                        hasSwitch = true;
                     }
                     break;
                 case TICTACTOE:
+                    //TODO implement stat changes
                     if(!hasTicTacToe){
+
+                        particleEffects[6] = itemEffect.findEmitter("TicTacToe");
                         hasTicTacToe = true;
                     }
                     break;
@@ -99,6 +120,10 @@ public class Pet extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
+        if (hasParallel || hasPi ||hasSwitch || hasSemicolon || hasHouse || hasMaxVal || hasTicTacToe){
+            for (ParticleEmitter emitter: particleEffects) {
+                emitter.draw(batch);}
+        }
         super.draw(batch, parentAlpha);
     }
 

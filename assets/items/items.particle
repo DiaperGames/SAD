@@ -1204,7 +1204,7 @@ spriteMode: single
 House.png
 
 
-Parralel Lines
+Parallel Lines
 - Delay -
 active: true
 lowMin: 0.0
