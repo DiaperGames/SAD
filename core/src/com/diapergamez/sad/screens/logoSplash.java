@@ -14,6 +14,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.utils.TimeUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.diapergamez.sad.actors.loading.Logo;
+import com.diapergamez.sad.actors.pets.Pet;
 import com.diapergamez.sad.gameMain;
 
 public class logoSplash implements Screen {
@@ -54,10 +55,6 @@ public class logoSplash implements Screen {
 
     @Override
     public void render(float delta) {
-        if(!ran){
-            Gdx.app.log("Tag","Rendering splashScreen");
-            ran = true;
-        }
 
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         //why did I do this?
@@ -67,18 +64,21 @@ public class logoSplash implements Screen {
         splashStage.act(Gdx.graphics.getDeltaTime());
        /*
        TODO put the asset manager stuff that is to be loaded here.
-        */ {
-            game.manager.update();
+        */
+
+        if(ran){
+            ran = false;
+            game.loadAssets();
+            Gdx.app.log("Loading","Assets Loaded");
+
         }
-        game.manager.update(1000);
-        //if assets are loaded, and the splash screen has been shown for longer than 10 seconds do
-        if (game.manager.update() && TimeUtils.timeSinceMillis(screenStart)>= 30000){
+        //if assets are loaded, and the splash screen has been shown for longer than 5 seconds do
+
+        if (game.manager.update() && TimeUtils.timeSinceMillis(screenStart)>=5000 ){
           mainMenu main = new mainMenu(game);
            game.setScreen(main);
            main.render(Gdx.graphics.getDeltaTime());
            hide();
-
-
         }
 
 

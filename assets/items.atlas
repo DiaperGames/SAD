@@ -1,0 +1,55 @@
+
+items.png
+size: 1024, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+House
+  rotate: false
+  xy: 487, 258
+  size: 223, 222
+  orig: 223, 222
+  offset: 0, 0
+  index: -1
+MaxValue()
+  rotate: false
+  xy: 2, 2
+  size: 202, 105
+  orig: 202, 105
+  offset: 0, 0
+  index: -1
+PI
+  rotate: false
+  xy: 826, 221
+  size: 134, 113
+  orig: 134, 113
+  offset: 0, 0
+  index: -1
+Paralell Lines
+  rotate: false
+  xy: 210, 180
+  size: 275, 300
+  orig: 275, 300
+  offset: 0, 0
+  index: -1
+Semicolon
+  rotate: false
+  xy: 712, 200
+  size: 112, 280
+  orig: 112, 280
+  offset: 0, 0
+  index: -1
+Switch
+  rotate: false
+  xy: 2, 109
+  size: 206, 371
+  orig: 206, 371
+  offset: 0, 0
+  index: -1
+TicTacToe
+  rotate: false
+  xy: 826, 336
+  size: 149, 144
+  orig: 149, 144
+  offset: 0, 0
+  index: -1

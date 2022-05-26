@@ -2,24 +2,21 @@ package com.diapergamez.sad.actors.loading;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.diapergamez.sad.screens.logoSplash;
 
 
+@SuppressWarnings("IntegerDivisionInFloatingPointContext")
 public class Logo extends Actor {
-    private InputListener listener;
     public int tw, th; //texture Width, and textureheight, to be used later.
     public float xBound, yBound;
     private Camera camera;
     Texture logo = new Texture(Gdx.files.internal("diapergames.jpg"));
-    Texture minion = new Texture(Gdx.files.internal("pets/minion.png"));
-    boolean secretminion = false;
+    public Texture minion = new Texture(Gdx.files.internal("pets/minion.png"));
+    public boolean secretminion = false;
     public Logo(Camera camera){
         //it's kinda silly I need this, but this does thing so that I can only click the baby
        this.camera = camera;
@@ -42,7 +39,6 @@ public class Logo extends Actor {
                 }
                 return false;
             }
-
             @Override
             //TODO get the minion to work?
             public boolean isOver(Actor actor, float x, float y) {
@@ -59,13 +55,7 @@ public class Logo extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha){
-       if(secretminion){
-           batch.draw(minion,camera.position.x - (tw/2), camera.position.y - (th/2),tw,th);
-       }else {
-           batch.draw(logo, camera.position.x - (tw / 2), camera.position.y - (th / 2), tw, th);
-           secretminion = false;
-       }
-        //batch.draw(logo,tw/2,th/2);
+        batch.draw(logo, camera.position.x - (tw / 2), camera.position.y - (th / 2), tw, th);        //batch.draw(logo,tw/2,th/2);
     }
 
     @Override
