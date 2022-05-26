@@ -1,0 +1,111 @@
+
+pets.png
+size: 2048, 1024
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+Base-case Pet
+  rotate: false
+  xy: 2, 4
+  size: 219, 214
+  orig: 219, 214
+  offset: 0, 0
+  index: -1
+Benzene
+  rotate: false
+  xy: 335, 4
+  size: 242, 209
+  orig: 242, 209
+  offset: 0, 0
+  index: -1
+BlackAnt
+  rotate: false
+  xy: 668, 4
+  size: 198, 147
+  orig: 198, 147
+  offset: 0, 0
+  index: -1
+Change
+  rotate: false
+  xy: 1001, 4
+  size: 206, 244
+  orig: 206, 244
+  offset: 0, 0
+  index: -1
+Chorby
+  rotate: false
+  xy: 1334, 4
+  size: 285, 205
+  orig: 285, 205
+  offset: 0, 0
+  index: -1
+Extra Credit
+  rotate: false
+  xy: 1667, 4
+  size: 131, 187
+  orig: 131, 187
+  offset: 0, 0
+  index: -1
+Horny
+  rotate: false
+  xy: 2, 250
+  size: 197, 202
+  orig: 197, 202
+  offset: 0, 0
+  index: -1
+Langton's Ant
+  rotate: false
+  xy: 335, 250
+  size: 198, 147
+  orig: 198, 147
+  offset: 0, 0
+  index: -1
+Minion
+  rotate: false
+  xy: 668, 250
+  size: 226, 202
+  orig: 226, 202
+  offset: 0, 0
+  index: -1
+Program Structure
+  rotate: false
+  xy: 1001, 250
+  size: 331, 244
+  orig: 331, 244
+  offset: 0, 0
+  index: -1
+Recursive Pet
+  rotate: false
+  xy: 1334, 250
+  size: 217, 213
+  orig: 217, 213
+  offset: 0, 0
+  index: -1
+Taxes
+  rotate: false
+  xy: 1667, 250
+  size: 187, 210
+  orig: 187, 210
+  offset: 0, 0
+  index: -1
+While()
+  rotate: false
+  xy: 2, 496
+  size: 167, 160
+  orig: 167, 160
+  offset: 0, 0
+  index: -1
+White Ant
+  rotate: false
+  xy: 335, 496
+  size: 198, 147
+  orig: 198, 147
+  offset: 0, 0
+  index: -1
+null Minion
+  rotate: false
+  xy: 668, 496
+  size: 226, 202
+  orig: 226, 202
+  offset: 0, 0
+  index: -1
