@@ -25,18 +25,16 @@ public class logoSplash implements Screen {
     private final Camera orthocam;
     private Logo logo;
     private Sound cry;
-    private InputListener listener;
+    //private InputListener listener;
     private boolean ran =false; //I use this for debugging purposes
     //TODO maybe draw a loading bar? that would be a good use of asset manager
 
     public logoSplash(gameMain gameMain) {
-
-
+        game = gameMain; //fixed minor bug
+        float w = game.w; float h = game.h;
         cry = Gdx.audio.newSound(Gdx.files.internal("baby.mp3"));
         screenStart = System.currentTimeMillis();
-        int w = Gdx.graphics.getWidth();
-        int h = Gdx.graphics.getHeight();
-        orthocam = new OrthographicCamera(w,h);
+       orthocam = new OrthographicCamera(w,h);
         FitViewport viewport = new FitViewport(w, h, orthocam);
         orthocam.update();
         logo = new Logo(orthocam);
@@ -44,13 +42,7 @@ public class logoSplash implements Screen {
         splashStage.addActor(logo);
         Gdx.input.setInputProcessor(splashStage);
         logo.addAction(Actions.fadeIn(2f));
-        game = gameMain; //fixed minor bug
         Gdx.input.setInputProcessor(splashStage);
-
-        Pet pet = new Pet(1,1,logo.minion);
-        pet.giveItem(Items.HOUSE);
-        splashStage.addActor(pet);
-
     }
 
     @Override

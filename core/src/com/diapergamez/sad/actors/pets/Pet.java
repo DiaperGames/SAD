@@ -3,7 +3,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.Event;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.diapergamez.sad.Items;
 import java.util.ArrayList;
 
@@ -33,12 +36,22 @@ public class Pet extends Actor {
     private boolean isStrongest;
     private boolean isFirst;
     private boolean isLast;
-
+    private ClickListener listener;
 
     private boolean isHealthiest;
 
     private byte turn;
     public TextureAtlas items;
+    /**
+     * index of ArrayList
+     * 0
+     * 1
+     * 2
+     * 3
+     * 4
+     * 5
+     * 6
+     */
     private ArrayList<ParticleEmitter> particleEffects = new ArrayList<ParticleEmitter>();
     //below bool is for the maxValue item
     //TODO We'd likely have to do stat checking of the units at the start of each turn
@@ -53,22 +66,20 @@ public class Pet extends Actor {
         petPic = texture;
         tw = petPic.getWidth();
         th = petPic.getHeight();
-        setBounds(x,y,tw,th);
+        setBounds(x, y, tw, th);
         setTouchable(Touchable.enabled);
         setVisible(true);
         items = new TextureAtlas(Gdx.files.internal("items.atlas"));
         itemEffect = new ParticleEffect();
-        itemEffect.load(Gdx.files.internal("items/items.particle"),items);
-        }
-    /* TODO !Important I haven't actually been able to test any of the particle effects/emitters outside of creating
-    *       creating them, so they may not even draw properly/in the right place*/
-
-    /*
+        itemEffect.load(Gdx.files.internal("items/items.particle"), items);
+        /*
      this is probably more efficient than building a bunch of item classes.
-     TODO: depending on how we implement turns in the game, we'll refactor/format our code
+     TODO: depending on how we implement turns in the gameScreen, we'll refactor/format our code
          here to reflect what turn it is, my best bet, is to constantly update the pets
          with what turn it is in the stages render method, which get's called each frame.
+         if someone other than liam implements, let him know so he can check for memory efficiency
     */
+    }
     /**
     *
     *
@@ -76,8 +87,6 @@ public class Pet extends Actor {
     *
     * ONLY CALL MAXVALUE IF This.isStrongest= true
     *
-     */
-    /**
      *
      * @param item
      */
@@ -180,15 +189,14 @@ public class Pet extends Actor {
                     }
                     break;
                 case TICTACTOE:
-
-                    //TODO implement stat changes
+                        //increment stats, and if the pet has no emitter, draw emitter
                     if(!hasTicTacToe){
                         attack++;
                         health++;
                         ticTacToeCount++;
-                        particleEffects.add(6,itemEffect.findEmitter("TicTacToe"));
+                        particleEffects.add(itemEffect.findEmitter("TicTacToe"));
                         hasTicTacToe = true;
-                    }else{
+                    }else{ //increment the stats accordingly, without drawing an extra emitter for memory saving
                         attack++;
                         health++;
                         ticTacToeCount++;

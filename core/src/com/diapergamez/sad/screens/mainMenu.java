@@ -15,7 +15,7 @@ public class mainMenu implements Screen {
     final gameMain game;
     OrthographicCamera camera;
     private Stage menu;
-    private Skin skin;
+    private Skin skin; //FUCK YOU NOLAN!!!!!!! WRITE THE FUCKING CODE YOU FUCKING PIECE OF SHIT!!!!!!!!
     /* TODO implement a Skin file (it's not like .skin i don't think) that will reference the font
     *   we want to use and whatever other stuff you put in that file;
     *
@@ -33,6 +33,7 @@ public class mainMenu implements Screen {
         Gdx.input.setInputProcessor(menu);
         //i barely know what this shit does
         skin = new Skin(Gdx.files.internal("UI/skinui.json"));
+        
 
 
 
