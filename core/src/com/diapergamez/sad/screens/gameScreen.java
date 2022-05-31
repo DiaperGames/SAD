@@ -5,10 +5,10 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.diapergamez.sad.Items;
 import com.diapergamez.sad.actors.pets.Pet;
@@ -22,6 +22,7 @@ public class gameScreen implements Screen {
     private gameMain game;
     private AssetManager manager;
     private float w,h;
+    public  final Vector2 mouseInWorld2d = new Vector2();
     private TextureAtlas pets, items;
     public gameScreen(gameMain game){
         this.game = game;
@@ -33,12 +34,18 @@ public class gameScreen implements Screen {
         orthocam = game.orthocam;
         FitViewport viewport = new FitViewport(w,h,orthocam);
         gameStage.setViewport(viewport);
+        orthocam.update();
         Gdx.input.setInputProcessor(gameStage);
-
-        final Pet pet = new Pet(1,1,pets.createSprite("Minion"));
+        Sprite temp = pets.createSprite("Minion");
+        Pet pet = new Pet(1,1,pets.createSprite("Minion"));
         pet.giveItem(Items.HOUSE);
-      pet.addListener(new petListener(pet));
+        gameStage.setKeyboardFocus(pet);
+        petListener listener= new petListener(pet, mouseInWorld2d);
+        gameStage.addTouchFocus(listener,pet,pet,0,0);
        gameStage.addActor(pet);
+       pet.setBounds(temp.getOriginX(),temp.getOriginY(),temp.getWidth(),temp.getHeight());
+       pet.addListener(listener);
+
 
     }
     @Override
@@ -50,8 +57,12 @@ public class gameScreen implements Screen {
     @Override
     public void render(float delta) {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT); // huh?
-        gameStage.act();
+       //below code is my implementation for the mouse position.
+        mouseInWorld2d.x = Gdx.input.getX();
+        mouseInWorld2d.y = Gdx.input.getY();
+        gameStage.act(Gdx.graphics.getDeltaTime());
         gameStage.draw();
+        orthocam.update();
 
     }
 

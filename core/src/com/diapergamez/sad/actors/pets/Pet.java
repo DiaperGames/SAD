@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.Event;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
 import com.diapergamez.sad.Items;
 import java.util.ArrayList;
 
@@ -42,6 +43,7 @@ public class Pet extends Actor {
 
     private byte turn;
     public TextureAtlas items;
+    private DragListener cockListener;
     /**
      * index of ArrayList
      * 0
@@ -72,6 +74,21 @@ public class Pet extends Actor {
         items = new TextureAtlas(Gdx.files.internal("items.atlas"));
         itemEffect = new ParticleEffect();
         itemEffect.load(Gdx.files.internal("items/items.particle"), items);
+        cockListener = new DragListener(){
+          private float startDragx, startDragy;
+
+            @Override
+            public void dragStart(InputEvent event, float x, float y, int pointer) {
+                startDragx = x;
+                startDragy = y;
+                super.dragStart(event, x, y, pointer);
+            }
+
+            @Override
+            public void drag(InputEvent event, float x, float y, int pointer) {
+                super.drag(event, x, y, pointer);
+            }
+        };
         /*
      this is probably more efficient than building a bunch of item classes.
      TODO: depending on how we implement turns in the gameScreen, we'll refactor/format our code
@@ -79,6 +96,7 @@ public class Pet extends Actor {
          with what turn it is in the stages render method, which get's called each frame.
          if someone other than liam implements, let him know so he can check for memory efficiency
     */
+
     }
     /**
     *
@@ -220,6 +238,7 @@ public class Pet extends Actor {
         }
 
     }
+
 
     public byte getHealth() {
         return health;
