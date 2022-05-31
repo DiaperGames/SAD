@@ -59,7 +59,8 @@ public class mainMenu implements Screen {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 //method for click listener
-                game.setScreen(new gameScreen(game));
+//                game.setScreen(new gameScreen(game));
+                game.setScreen(new petChoice(game));
                 //switching the screen
                 mainMenu.this.hide();
             }

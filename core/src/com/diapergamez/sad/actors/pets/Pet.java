@@ -83,12 +83,13 @@ public class Pet extends Actor {
                 startDragy = y;
                 super.dragStart(event, x, y, pointer);
             }
-
             @Override
             public void drag(InputEvent event, float x, float y, int pointer) {
-                super.drag(event, x, y, pointer);
+                moveBy(x-getWidth()/2,y-getHeight() / 2);
+                Gdx.app.log("FUCK","SHIT!");
             }
         };
+        addListener(cockListener);
         /*
      this is probably more efficient than building a bunch of item classes.
      TODO: depending on how we implement turns in the gameScreen, we'll refactor/format our code
@@ -98,6 +99,7 @@ public class Pet extends Actor {
     */
 
     }
+
     /**
     *
     *
