@@ -3,17 +3,33 @@ package com.diapergamez.sad;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.DragListener;
+import com.diapergamez.sad.actors.pets.Pet;
+
 //TODO adjust the javadocs as the click listener is implemented;
 public class petListener extends ClickListener {
-    /**
+private Pet pet;
+        /**
      * Create a listener where {@link #clicked(InputEvent, float, float)} is only called for left clicks.
      *
      * @see #petListener(int)
      */
-    public petListener() {
+    public petListener(Pet pet) {
+
         super();
+
+        this.pet = pet;        //this is probably really bad code to implement this, as it may be the only thing we need, but idgaf i'm
+        //carrying the project rn anyways
+
     }
 
+    /**
+     * wocky implementation of a hidden drag listener
+     * @param event
+     * @param x
+     * @param y
+     * @param pointer
+     */
     /**
      * @param button
      * @see #setButton(int)
@@ -24,12 +40,14 @@ public class petListener extends ClickListener {
 
     @Override
     public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-        return super.touchDown(event, x, y, pointer, button);
+       pet.setOrigin(getTouchDownX(),getTouchDownY());
+        return true;
+
     }
 
     @Override
     public void touchDragged(InputEvent event, float x, float y, int pointer) {
-        super.touchDragged(event, x, y, pointer);
+        pet.setPosition(x, y);
     }
 
     @Override
@@ -57,7 +75,7 @@ public class petListener extends ClickListener {
 
     @Override
     public void clicked(InputEvent event, float x, float y) {
-        super.clicked(event, x, y);
+        pet.moveBy(1000,1000);
     }
 
     /**

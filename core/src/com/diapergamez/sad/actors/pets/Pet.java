@@ -17,7 +17,7 @@ public class Pet extends Actor {
                   tw,
                   th;
 
-    private final Texture petPic;
+    private final Sprite petPic;
     private ParticleEffect itemEffect;
     private byte
             level,
@@ -60,13 +60,13 @@ public class Pet extends Actor {
     * (is drawn from bottom left)
     * Implement texture parameter in subclass, push texture parameter to super.
      */
-    public Pet(float x, float y, Texture texture) {
+    public Pet(float x, float y, Sprite texture) {
         myX = x;
         myY = y;
         petPic = texture;
         tw = petPic.getWidth();
         th = petPic.getHeight();
-        setBounds(x, y, tw, th);
+        setBounds(x + (tw/2),y + (th/2),tw,th);
         setTouchable(Touchable.enabled);
         setVisible(true);
         items = new TextureAtlas(Gdx.files.internal("items.atlas"));
