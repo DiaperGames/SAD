@@ -4,20 +4,19 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.diapergamez.sad.actors.pets.Pet;
 import com.diapergamez.sad.screens.logoSplash;
 
 public class gameMain extends Game{
 public AssetManager manager = new AssetManager();
 public OrthographicCamera orthocam;
-
+public float w,
+	h;
 
 
 	@Override
 	public void create() {
-		int w = Gdx.graphics.getWidth(); int h = Gdx.graphics.getHeight();
+		w = Gdx.graphics.getWidth(); int h = Gdx.graphics.getHeight();
 		orthocam = new OrthographicCamera(w,h);
 		setScreen(new logoSplash(gameMain.this));
 	}
@@ -29,10 +28,10 @@ public OrthographicCamera orthocam;
 	}
 
 	public void loadAssets(){
-		//TODO put assett loading shit here
+	        //TODO put assett loading shit here
 		manager.load("items.atlas", TextureAtlas.class);
 		manager.load("pets.atlas",TextureAtlas.class);
 		manager.update();
-
+                 
 	}
 }
